@@ -39,6 +39,13 @@ USER_DATA_CHECK = {
             'token': 'xuisosiguboitriasi',
             'response': 'User not found'
         },
+        {
+            'user_name': 'test_dont_tuch_4',
+            'user_password': 'zxc12345',
+            'subscription': False,
+            'token': 'qebuxvuqop',
+            'response': 'Subscription is out of date'
+        },
     ]
 }
 
@@ -86,6 +93,13 @@ USER_DATA_GENERATE = {
             'subscription': True,
             'token': 'xuisosiguboitriasi',
             'response': 'User not found'
+        },
+        {
+            'user_name': 'test_dont_tuch_4',
+            'user_password': 'zxc12345',
+            'subscription': False,
+            'token': False,
+            'response': 'Subscription is out of date'
         },
     ]
 }
