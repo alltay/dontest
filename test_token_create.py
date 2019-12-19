@@ -1,5 +1,6 @@
 import pytest
 import requests
+import time
 
 from user_data import USER_DATA_GENERATE as users
 
@@ -16,10 +17,12 @@ def test_positive(env, user):
     assert('Error' not in response.text)
 
 
+@pytest.mark.slow
 @pytest.mark.parametrize(
     "user", users['positive'],)
 def test_positive_2(env, user):
     """Check what every time generates new token"""
+    time.sleep(61)
     data = {
         'login': user['user_name'],
         'password': user['user_password']

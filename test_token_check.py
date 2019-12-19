@@ -1,5 +1,6 @@
 import pytest
 import requests
+import time
 
 from user_data import USER_DATA_CHECK as users
 
@@ -16,17 +17,18 @@ def test_positive(env, user):
     assert(user['response'] in response.text)
 
 
+@pytest.mark.slow
 @pytest.mark.parametrize(
     "user", users['positive'],)
 def test_positive_2(env, user):
     """Check positive response on check page"""
+    time.sleep(61)
     data = {
         'login': user['user_name'],
         'token': user['token']
     }
     response = requests.post('%s/app/check/' % env, data)
     assert('Error' not in response.text)
-
 
 
 @pytest.mark.parametrize(
@@ -41,10 +43,12 @@ def test_negative(env, user):
     assert(user['response'] in response.text)
 
 
+@pytest.mark.slow
 @pytest.mark.parametrize(
     "user", users['negative'],)
 def test_negative_2(env, user):
     """Check negative response on check page with wrong params"""
+    time.sleep(61)
     data = {
         user['user_name']: 'login',
         user['token']: 'token'

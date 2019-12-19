@@ -103,3 +103,14 @@ USER_DATA_GENERATE = {
         },
     ]
 }
+
+USER_DATA_E2E = {
+    'positive': [
+        {
+            'user_name': 'test_dont_tuch_5',
+            'user_password': 'zxc12345',
+            'subscription': 3,
+            'token': True
+        },
+    ],
+}
