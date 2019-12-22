@@ -3,7 +3,7 @@ import pytest
 
 ENVS = [
     {'name': 'local', 'url': 'http://127.0.0.1:8000'},
-    {'name': 'prod', 'url': 'http://dongun.herokuapp.com'},
+    {'name': 'prod', 'url': 'http://lighttracer.herokuapp.com'},
 ]
 
 

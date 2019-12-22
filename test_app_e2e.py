@@ -106,5 +106,5 @@ def test_positive2_e2e(env, user):
 # response = requests.post('http://127.0.0.1:8000/app/generate/', {'login': 'test_dont_tuch_3', 'password': 'zxc12345'})
 # print(json.loads(response.text)['message'])
 
-# response = requests.post('http://127.0.0.1:8000/app/check/', {'login': 'test_dont_tuch_3', 'token': 'gxvvyxdalv'})
-# print(json.loads(response.text)['message'])
+response = requests.post('http://127.0.0.1:8000/app/check/', {'login': 'test_dont_tuch_3', 'token': 'yrmyfsgegt'})
+print(json.loads(response.text)['message'])
