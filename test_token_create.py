@@ -6,7 +6,7 @@ from user_data import USER_DATA_GENERATE as users
 
 
 @pytest.mark.parametrize(
-    "user", users['positive'],)
+    "user", [users['positive'][0]])
 def test_positive(env, user):
     """Check positive response on generate page"""
     data = {
@@ -19,7 +19,7 @@ def test_positive(env, user):
 
 @pytest.mark.slow
 @pytest.mark.parametrize(
-    "user", users['positive'],)
+    "user", [users['positive'][0]])
 def test_positive_2(env, user):
     """Check what every time generates new token"""
     time.sleep(61)
@@ -63,7 +63,7 @@ def test_negative_3(env):
 
 
 @pytest.mark.parametrize(
-    "user", users['positive'],)
+    "user", [users['positive'][0]])
 def test_negative_4(env, user):
     data = {
         'login': user['user_name'],

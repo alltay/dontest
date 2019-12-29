@@ -28,7 +28,7 @@ def test_positive_e2e(env, user):
 
 @pytest.mark.slow
 @pytest.mark.parametrize(
-    "user", [users['positive'][1]],)
+    "user", [users['positive'][1]])
 def test_negative_e2e(env, user):
     """Check negative response on fast requests"""
     time.sleep(61)
@@ -47,7 +47,7 @@ def test_negative_e2e(env, user):
 
 @pytest.mark.slow
 @pytest.mark.parametrize(
-    "user", users['positive'][1],)
+    "user", [users['positive'][1]])
 def test_negative2_e2e(env, user):
     """Check negative response on double login"""
     time.sleep(61)
@@ -100,7 +100,7 @@ def test_positive2_e2e(env, user):
 
 @pytest.mark.slow
 @pytest.mark.parametrize(
-    "user", users['positive'])
+    "user", [users['positive'][0]])
 def test_positive_close_e2e(env, user):
     """Check clo"""
     time.sleep(61)
