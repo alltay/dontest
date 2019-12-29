@@ -57,6 +57,12 @@ USER_DATA_GENERATE = {
             'subscription': True,
             'token': True
         },
+        {
+            'user_name': 'test_dont_tuch_6',
+            'user_password': 'zxc12345',
+            'subscription': True,
+            'token': True
+        }
     ],
     'negative': [
         {
